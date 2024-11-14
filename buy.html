@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy a Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Auto Trading</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Listings</a>
+                <div class="dropdown-content">
+                    <a href="buy.html">Buy</a>
+                    <a href="sell.html">Sell</a>
+                </div>
+            </li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="listing-container">
+        <?php include 'fetch_listings.php'; ?>
+    </section>
+
+    <!-- Popup Modal for Detailed View -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-images"></div>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="home.html#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>2000 Simcoe St, Oshawa, ON<br>L1G0C5</p>
+            <p>Email: info@autotrade.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Social Links</h3>
+            <p><a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
