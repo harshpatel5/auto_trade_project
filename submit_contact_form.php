@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-// Function to check if user is logged in
+// Function to check if user is logged in (for any additional redirects, etc., you can modify as needed)
 function isUserLoggedIn() {
     return isset($_SESSION['username']);
 }
 
 // Handle logout if requested
 if (isset($_GET['logout'])) {
-    session_unset(); // Clears all session variables
-    session_destroy(); // Destroys the session
-    header("Location: login.php"); // Redirect to login page
+    session_destroy();
+    unset($_SESSION['username']);
+    header("location: login.php"); // Redirect to login page after logout
     exit();
 }
 ?>
@@ -22,20 +22,7 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Trade</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        // Logout function
-        function logout() {
-            window.location.href = 'index.php?logout=true'; // Redirect to logout URL
-        }
-
-        function checkLoginStatus() {
-            <?php if (!isUserLoggedIn()) : ?>
-                // Redirect to login page with a message if not logged in
-                alert("Please log in to access the Sell page.");
-                window.location.href = "login.php";
-            <?php endif; ?>
-        }
-    </script>
+    <script></script>
 </head>
 <body>
 
@@ -48,44 +35,30 @@ if (isset($_GET['logout'])) {
             <a href="#">Listings</a>
             <div class="dropdown-content">
                 <a href="buy.html">Buy</a>
-                <!-- Show Sell option only if the user is logged in -->
-                <?php if (isUserLoggedIn()) : ?>
-                    <a href="sell.php" id="sell-option">Sell</a>
-                <?php else : ?>
-                    <a href="javascript:void(0);" onclick="checkLoginStatus()" id="sell-option">Sell</a>
-                <?php endif; ?>
+                <a href="sell.html">Sell</a>
             </div>
         </li>
         <li><a href="contact.html">Contact Us</a></li>
-
-        <!-- Login/Logout and Username Display -->
-        <li id="user-menu">
-            <?php if (isUserLoggedIn()) : ?>
-                <div class="dropdown">
-                    <a href="javascript:void(0);">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
-                    <div class="dropdown-content">
-                        <a href="javascript:void(0);" onclick="logout()" style="color: red;">Logout</a>
-                    </div>
+        <?php if (isUserLoggedIn()) : ?>
+            <!-- Show username and logout link if logged in -->
+            <li class="dropdown">
+                <a href="#">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></a>
+                <div class="dropdown-content">
+                    <a href="index.php?logout=1" style="color: red;">Logout</a>
                 </div>
-            <?php else : ?>
-                <a href="login.php">Login</a>
-            <?php endif; ?>
-        </li>
+            </li>
+                    
+        <?php else : ?>
+            <!-- Show login link if not logged in -->
+            <li><a href="login.php">Login</a></li>
+        <?php endif; ?>
     </ul>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <a href="buy.html"><button>BUY</button></a>
-        <?php if (isUserLoggedIn()) : ?>
-            <a href="sell.php"><button>SELL</button></a>
-        <?php else : ?>
-            <a href="javascript:void(0);" onclick="checkLoginStatus()"><button>SELL</button></a>
-        <?php endif; ?>
-    </div>
-</section>    
+<h1>thanks for reaching out someone will reach out to you soon.</h1>
+
+
 
 <!-- About Us Section -->
 <section class="section" id="about">

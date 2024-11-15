@@ -7,16 +7,7 @@ $dbname = 'auto_trade';
 $username = 'root';
 $password = '';
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Database connection successful!\n"; // Temporary success message for debugging
-} catch (PDOException $e) {
-    // Detailed error message to help diagnose
-    http_response_code(500);
-    echo "Could not connect to the database. Error: " . $e->getMessage();
-    exit();
-}
+
 
 // Check required fields are not empty
 $required_fields = ['make', 'model', 'year', 'odometer', 'cc', 'price'];

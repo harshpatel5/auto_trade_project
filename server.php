@@ -51,8 +51,9 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
+    $_SESSION['email'] = $email;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+  	header('location: home.php');
   }
 }
 
@@ -73,7 +74,9 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM login_info WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $username;
+  	  $user = mysqli_fetch_assoc($results);
+      $_SESSION['username'] = $user['username'];
+      $_SESSION['email'] = $user['email'];
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: home.php');
   	}else {
