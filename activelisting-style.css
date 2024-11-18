@@ -1,0 +1,174 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.navbar-search form {
+    display: flex;
+}
+
+.navbar-search input {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 200px;
+}
+
+.navbar-search button {
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.navbar-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.navbar-options a:hover {
+    color: #ff4d4d;
+}
+
+/* Listing Container */
+.listing-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.listing-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Cards Grid */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Always have 4 columns */
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 250px); /* Ensures grid takes enough height */
+}
+
+/* Individual Card */
+.card {
+    width: 100%;
+    height: 350px; /* Fixed height for uniformity */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Fixed height for images */
+    object-fit: cover;
+    border-bottom: 5px solid #ff0000;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content .car-distance {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card-content .car-price {
+    font-size: 22px; /* Slightly larger font size for visibility */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #000; /* Ensures strong contrast */
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+    border-bottom: 2px solid #f8f9fa;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff4d4d;
+}

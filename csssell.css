@@ -1,0 +1,215 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+/* Search bar styling */
+.navbar-search form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 200px;
+}
+
+.navbar-search button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-search button:hover {
+    background-color: #cc3c3c;
+}
+
+/* Navbar options styling */
+.navbar-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-options a:hover {
+    color: #ff4d4d;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Upload Box Styling */
+.upload-box {
+    flex: 1;
+    background-color: #e6e6e6;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.upload-instructions {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.image-upload-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-upload-slot {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.upload-placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-input {
+    display: none;
+}
+
+/* Form Fields Styling */
+.form-fields {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+    border-bottom: 2px solid #f8f9fa;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff4d4d;
+}
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,422 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #fff;
+}
+
+.navbar-search form {
+    display: flex;
+}
+
+.navbar-search input {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 200px;
+}
+
+.navbar-search button {
+    padding: 8px 12px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.navbar-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.navbar-options a:hover {
+    color: #ff4d4d;
+}
+/* Carousel Box */
+.carousel-box {
+    flex: 2;
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(200, 200, 200, 0.5); /* Light grey glow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+   
+}
+/* Enlarge image and add darker glow on hover */
+.carousel-box:hover {
+    transform: scale(1.25); /* Enlarge the picture box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 20px rgba(100, 100, 100, 0.8); /* Darker and bigger glow */
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ensures images take up the full width */
+    height: 100%;
+    margin: 0; /* Removes any margins around images */
+}
+
+.carousel-images img {
+    width: 100%; /* Ensures the image scales horizontally */
+    height: 100%; /* Ensures the image scales vertically */
+    object-fit: contain; /* Centers the image without cropping */
+    flex-shrink: 0; /* Prevents shrinking of the image */
+}
+
+/* Carousel Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 99, 71, 0.7);
+}
+
+/* Content Container */
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Details Box */
+/* Add a grey border around the details box */
+.details-box {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ccc; /* Grey border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease; /* Smooth transition for any border changes */
+}
+
+/* Optional: Add subtle hover effect for details box */
+.details-box:hover {
+    border-color: #999; /* Darker grey border on hover */
+}
+
+.car-details h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.car-details p {
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 10px;
+    line-height: 1.8; /* Slightly increase line height for better readability */
+    color: #555;
+}
+
+.car-details p strong {
+    color: #000;
+    font-size: 20px; /* Slightly larger for emphasized text */
+}
+
+/* Section Heading */
+.section-heading {
+    font-size: 28px;
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #333;
+}
+
+/* Car Cards Container */
+.car-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+/* Car Card */
+.car-card {
+    width: 250px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Car Card Image */
+.car-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Car Card Content */
+.car-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.car-card-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.car-card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.details-link {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+    background-color: #e63939;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.modal-content form input, 
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-content form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.modal-content form button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content form button:hover {
+    background-color: #e63939;
+}
+
+.close-modal {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: #e63939;
+}
+/* Contact Seller Button Section */
+.contact-seller-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-seller-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #c52727;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-seller-button:hover {
+    background-color: #e63939;
+}
+
+
+/* Success Message Styles */
+.success-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+    10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto; /* Ensures footer stays at the bottom */
+}
+
+footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+    border-bottom: 2px solid #f8f9fa;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff4d4d;
+}
+

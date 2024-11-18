@@ -1,0 +1,141 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background: url('back.webp') repeat; /* Repeats the background image */
+  background-size: auto; /* Keeps the original size of the image */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #444;
+  margin-top: 20px; /* Adds top margin to everything */
+}
+
+
+/* Ensure header goes to the top center */
+.header {
+  margin-top: 20px; /* Add some space from the very top */
+  text-align: center; /* Center the text horizontally */
+  width: 100%; /* Ensure it spans the entire page width */
+}
+
+.header h2 {
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 800; /* Bold font */
+  margin: 0; /* Remove default margin */
+  text-shadow: 0 0 10px rgb(227, 20, 30), /* Outer dark glow */
+               0 0 20px rgba(244, 6, 6, 0.888), /* Secondary glow for more depth */
+               0 0 30px rgba(243, 9, 9, 0.7); /* Greenish glow for a vibrant effect */
+}
+
+
+/* Form container styling */
+form {
+  background: #f0f0f0; /* Light gray background for the login box */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for contrast */
+  width: 100%;
+  max-width: 450px;
+  margin-top: 50px; /* Add spacing between the header and form */
+  transition: all 0.3s ease-in-out;
+}
+
+form:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  transition: border 0.3s ease;
+  background-color: #fafafa;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff4d4d;
+  background-color: #fff;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #9c1010;
+}
+
+p {
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+}
+
+p a {
+  color: #ff4d4d;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+p a:hover {
+  color: #b40d0d;
+}
+
+@media (max-width: 600px) {
+  .header h2 {
+    font-size: 2em;
+  }
+
+  form {
+    padding: 30px;
+    width: 85%;
+  }
+
+  .input-group input {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 1.1em;
+  }
+}

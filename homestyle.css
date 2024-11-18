@@ -1,0 +1,322 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Top Notification Bar */
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 35px;
+    color: #fff;
+}
+
+/* Search bar styling */
+.navbar-search form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 200px;
+}
+
+.navbar-search button {
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-search button:hover {
+    background-color: #cc3c3c;
+}
+
+/* Navbar options styling */
+.navbar-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-options a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar-options a:hover {
+    color: #ff4d4d;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffffff;
+    padding: 0px 0 30px; /* Adjust padding for space under navbar */
+    position: relative;
+}
+
+/* Ensure hero image is properly displayed */
+.hero-background {
+    position: relative;
+    height: auto; /* Allow image height to adjust dynamically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-background img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; /* Maintain image proportions */
+    position: relative;
+    z-index: 1;
+}
+
+/* Push "Buy" and "Sell" sections lower */
+.hero-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Button card styling */
+.button-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px 60px;
+    width: 400px;
+    text-align: left;
+    position: relative;
+}
+
+.button-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.button-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Arrow button inside the box */
+.arrow-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.arrow-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+/* About Section */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Suggested Cars Section */
+.suggested-cars {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.suggested-cars .section-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.suggested-cars .divider {
+    width: 50px;
+    height: 4px;
+    background-color: #fecd43;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+.car-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.car-card {
+    width: 250px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.car-card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.car-card-content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.car-card-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.details-link {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.details-link:hover {
+    background-color: #e63939;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212529;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f8f9fa;
+    border-bottom: 2px solid #f8f9fa;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 8px 0;
+}
+
+footer ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #ff4d4d;
+}
